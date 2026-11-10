@@ -6,28 +6,30 @@ function Projects() {
 
   const categories = [
     { id: 'all', label: 'All Work' },
-    { id: 'design', label: 'UI/UX Design' }
+    { id: 'web', label: 'Web Applications' },
+    { id: 'mobile', label: 'Mobile Apps' }
   ];
 
   const projectsData = [
     {
       id: 1,
       title: 'Task-Management-System',
-      category: 'all',
+      category: 'web',
       description: 'A Task Management System is a software application used to create, organize, assign, and track tasks efficiently. It helps users manage work, set priorities, monitor progress, and complete tasks on time. The system improves productivity, teamwork, and workflow management by reducing delays and keeping all tasks organized.',
-      tags: ['HTML', 'CSS', 'JavaScript', 'Php'],
+      tags: ['HTML', 'CSS', 'JavaScript', 'PHP', 'MySQL'],
       github: 'https://github.com/Sahansamuditha/Task-Management-System.git',
-      previewGradient: 'linear-gradient(135deg, #00f2fe 0%, #4facfe 100%)',
+      previewGradient: 'linear-gradient(135deg, #091a32 0%, #173866 100%)',
       previewUi: (
         <div className="project-preview-mockup">
           <div className="mockup-header">
             <span className="dot red"></span>
             <span className="dot yellow"></span>
             <span className="dot green"></span>
+            <span style={{ fontSize: '0.72rem', color: '#8892b0', marginLeft: 'auto', fontFamily: 'monospace' }}>task_manager.php</span>
           </div>
           <div className="mockup-body code">
             <span className="line-num">1</span> <span className="keyword">const</span> flow = <span className="function">initDevFlow</span>(); <br />
-            <span className="line-num">2</span> <span className="comment">{"// Real-time pairing active"}</span> <br />
+            <span className="line-num">2</span> <span className="comment">{"// Real-time task tracking"}</span> <br />
             <span className="line-num">3</span> flow.<span className="function">connectUser</span>(<span className="string">'Sahan'</span>);
           </div>
         </div>
@@ -36,31 +38,67 @@ function Projects() {
     {
       id: 2,
       title: 'Election_Project',
-      category: 'All',
-      description: 'Election_Project is a simple web-based system for managing candidates, voters, and basic election data. It helps organize information, display results, and understand how digital election workflows operate using PHP, MySQL, HTML, and CSS.',
-      tags: ['HTML', 'CSS', 'JavaScript', 'Php'],
+      category: 'web',
+      description: 'Election_Project is a secure web-based system for managing candidates, voters, and real-time election data. It helps organize information, display live voting results, and understand how digital election workflows operate using PHP, MySQL, HTML, and CSS.',
+      tags: ['HTML', 'CSS', 'JavaScript', 'PHP', 'MySQL'],
       github: 'https://github.com/Sahansamuditha/Election_Project.git',
-      previewGradient: 'linear-gradient(135deg, #a18cd1 0%, #fbc2eb 100%)',
-   
+      previewGradient: 'linear-gradient(135deg, #1d0f38 0%, #361868 100%)',
+      previewUi: (
+        <div className="project-preview-mockup">
+          <div className="mockup-header">
+            <span className="dot red"></span>
+            <span className="dot yellow"></span>
+            <span className="dot green"></span>
+            <span style={{ fontSize: '0.72rem', color: '#c084fc', marginLeft: 'auto', fontFamily: 'monospace' }}>● Live Vote Analytics</span>
+          </div>
+          <div className="mockup-body chart">
+            <div className="bar" style={{ height: '45%' }}></div>
+            <div className="bar active" style={{ height: '88%' }}></div>
+            <div className="bar" style={{ height: '62%' }}></div>
+            <div className="bar active" style={{ height: '78%' }}></div>
+            <div className="bar" style={{ height: '38%' }}></div>
+          </div>
+        </div>
+      )
     },
     {
       id: 3,
       title: 'ERP-admin',
-      category: 'All',
+      category: 'mobile',
+      description: 'A cross-platform mobile administrative management dashboard designed to track field operations, warehouse inventory, order dispatches, and real-time fleet routes using React Native, Redux, and Google Maps.',
       tags: ['React Native', 'Redux', 'Expo', 'Google Maps'],
       github: 'https://github.com/fathima-shahfa/ERP-admin.git',
-      previewGradient: 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)',
+      previewGradient: 'linear-gradient(135deg, #0e1e24 0%, #1a3c48 100%)',
+      previewUi: (
+        <div className="project-preview-mockup phone">
+          <div className="mockup-screen">
+            <div className="circle-progress">
+              <span className="label">88%</span>
+              <span className="sub">Fleet Active</span>
+            </div>
+          </div>
+        </div>
+      )
     },
     {
       id: 4,
-      title: ' Serva project',
-      category: 'All',
-      description: 'This project develops a centralized Maintenance Monitoring and Management Platform for the Premises Management Unit, ITUM, to replace informal reporting about maintenance requirements. It provides a digital system to log, report, track and manage maintenance tasks efficiently',
-      tags: ['React', 'React Native', 'Node.js', 'MySql'],
+      title: 'Serva Project',
+      category: 'web',
+      description: 'This project develops a centralized Maintenance Monitoring and Management Platform for the Premises Management Unit, ITUM, to replace informal reporting about maintenance requirements. It provides a digital system to log, report, track and manage maintenance tasks efficiently.',
+      tags: ['React', 'React Native', 'Node.js', 'MySQL'],
       github: 'https://github.com/Sahansamuditha/Serva-project.git',
-      previewGradient: 'linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%)',
+      previewGradient: 'linear-gradient(135deg, #0b1424 0%, #16243f 100%)',
+      previewUi: (
+        <div className="project-preview-mockup holosmart">
+          <div className="toggle-container">
+            <div className="switch active">
+              <span className="slider"></span>
+            </div>
+            <span className="text">ITUM Maintenance Active</span>
+          </div>
+        </div>
+      )
     }
-
   ];
 
   const filteredProjects = filter === 'all' 
